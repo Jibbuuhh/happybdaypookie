@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gefeliciteerd Liefie</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Chewy -->
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+  <!-- Sour Gummy -->
+  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@1,500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #bfe9ff, #dff6ff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+      padding: 20px;
+    }
+
+    .container {
+      text-align: center;
+      background: white;
+      padding: 35px 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .flork {
+      width: 180px;
+      max-width: 70%;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 8vw, 3.5rem);
+      margin-bottom: 25px;
+      color: #4aa3df;
+      font-family: "Chewy", system-ui;
+      letter-spacing: 2px;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 6vw, 2.5rem);
+      margin-bottom: 30px;
+      color: #4aa3df;
+      font-family: "Chewy", system-ui;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-family: "Sour Gummy", sans-serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 2.1rem;
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    button {
+      background: #4aa3df;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: #2f8fcb;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .prizes {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background: #eef9ff;
+      border: 2px solid #9fdcff;
+      padding: 25px 20px;
+      border-radius: 15px;
+      font-size: 1.2rem;
+      width: 250px;
+      max-width: 100%;
+
+      font-family: "Sour Gummy", sans-serif;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .box img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+
+    .dwerg-img {
+      width: 100%;
+      max-width: 360px;
+      object-fit: contain;
+      display: block;
+      margin: 20px auto 0 auto;
+    }
+
+    /* Mobiel */
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      .prizes {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .box {
+        width: 100%;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 14px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Eerste pagina -->
+    <div id="welcome">
+
+      <!-- Blije GIF -->
+      <img 
+        class="flork"
+        src="https://media1.giphy.com/media/wOwxKXmhBWLRYYSK0N/giphy_s.gif"
+        alt="Blije Flork"
+      >
+
+      <h1>GEFELICITEERD LIEFIE!!</h1>
+
+      <button onclick="showPrizes()">Ga verder</button>
+    </div>
+
+    <!-- Tweede pagina -->
+    <div id="prizesPage" class="hidden">
+      <h2>🏆 Jouw prijzen:</h2>
+
+      <div class="prizes">
+
+        <div class="box">
+          Een date naar keuze
+
+          <img
+            src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NHQwMTdjd3prbjF1bGZiOGlwZnZ1MTJqNTdvc2x1b3p3am10bW0xaCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/V4k06hCs1yCfcoidL0/giphy.gif"
+            alt="Date GIF"
+          >
+        </div>
+
+        <div class="box">
+          Een bordspel naar keuze bij de Dwalende Dwerg
+
+          <img
+            class="dwerg-img"
+            src="https://dedwalendedwerg.nl/cdn/shop/files/De_Dwalende_Dwerg_Logo_VIERKANT_40624f2c-d71d-4255-a69e-079993d703c7.png?v=1712659448&width=500"
+            alt="De Dwalende Dwerg"
+          >
+        </div>
+
+      </div>
+
+      <p>Ily &lt;3</p>
+
+    </div>
+
+  </div>
+
+  <script>
+    function showPrizes() {
+      document.getElementById("welcome").classList.add("hidden");
+      document.getElementById("prizesPage").classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
