@@ -24,7 +24,11 @@
     }
 
     body {
-      background: linear-gradient(135deg, #bfe9ff, #dff6ff);
+      background-image: url("bg.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -35,7 +39,8 @@
 
     .container {
       text-align: center;
-      background: white;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(4px);
       padding: 35px 25px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -168,7 +173,7 @@
         alt="Blije Flork"
       >
 
-      <h1>GEFELICITEERD LIEFIE!!❤</h1>
+      <h1>❤GEFELICITEERD LIEFIE!!</h1>
 
       <button onclick="showPrizes()">Ga verder</button>
     </div>
